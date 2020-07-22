@@ -20,4 +20,27 @@ public class BoardController {
 		model.addAttribute("data", service.getBoardList());
 		return "board/list";
 	}
+	
+	@RequestMapping(value = "/write", method = RequestMethod.GET)
+	public String boardWrite() {
+		System.out.println("run board/write");
+		return "board/write";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
