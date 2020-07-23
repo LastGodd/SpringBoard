@@ -5,7 +5,11 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-// mybatis에서 사용하기 위해
+// mybatis가 DB에서 값을 가져오기 위해 사용
 public interface BoardMapper {
-	public List<BoardVO> getBoardList();
+	public int insBoard(BoardVO param);
+	public List<BoardVO> selBoardList();
+	public BoardVO selBoard(BoardVO param);
+	public void boardUpd(BoardVO param);
+	public int boardDel(int param);
 }
