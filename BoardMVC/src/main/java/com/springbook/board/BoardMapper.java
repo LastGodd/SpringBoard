@@ -10,6 +10,6 @@ public interface BoardMapper {
 	public int insBoard(BoardVO param);
 	public List<BoardVO> selBoardList();
 	public BoardVO selBoard(BoardVO param);
-	public void boardUpd(BoardVO param);
-	public int boardDel(int param);
+	public int updBoard(BoardVO param);
+	public int delBoard(int param);
 }

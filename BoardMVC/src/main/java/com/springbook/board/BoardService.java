@@ -24,11 +24,11 @@ public class BoardService {
 		return mapper.selBoard(param);
 	}
 	
-	public void boardUpd(BoardVO param) {
-		mapper.boardUpd(param);
+	public int updBoard(BoardVO param) {
+		return mapper.updBoard(param);
 	}
 	
-	public int boardDel(int param) {
-		return mapper.boardDel(param);
+	public int delBoard(int param) {
+		return mapper.delBoard(param);
 	}
 }

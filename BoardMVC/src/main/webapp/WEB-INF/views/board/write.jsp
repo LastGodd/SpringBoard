@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>글${data != null ? '수정' : '쓰기'}</title>
 </head>
 <body>
-	<form action="/board/write" method="post">
-		<div>제목: <input type="text" name="title" size="15"></div>
-		<div>내용: <textarea name="ctnt"></textarea></div>
-		<div><input type="submit" value="등록"></div>
-		<div><a href="/board/list">목록</a></div>
+	<form action="/board/${data != null ? 'upd' : 'write'}" method="post">
+		<input type="hidden" name="i_board" value="${data != null ? data.i_board : 0}">
+		<div>제목: <input type="text" name="title" value="${data.title}"></div>
+		<div>내용: <textarea name="ctnt">${data.ctnt}</textarea></div>
+		<div><input type="submit" value="${data != null ? '수정' : '등록'}"></div>
 	</form>
 </body>
 </html>
