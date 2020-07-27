@@ -4,6 +4,7 @@ public class UserVO {
 	private int i_user;
 	private String uid;
 	private String upw;
+	private String salt;
 	private String upwConfirm;
 	private String nm;
 	private String addr;
@@ -26,6 +27,12 @@ public class UserVO {
 	}
 	public void setUpw(String upw) {
 		this.upw = upw;
+	}
+	public String getSalt() {
+		return salt;
+	}
+	public void setSalt(String salt) {
+		this.salt = salt;
 	}
 	public String getUpwConfirm() {
 		return upwConfirm;
