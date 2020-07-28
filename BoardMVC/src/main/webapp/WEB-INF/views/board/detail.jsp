@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div>
-		<a href="/board/del?i_board=${data.i_board}">삭제</a>
+		<a href="/board/del?i_board=${data.i_board}" onclick="return chk()">삭제</a>
 		<a href="/board/upd?i_board=${data.i_board}">수정</a>
 		<a href="/board/list">목록</a>
 	</div>
@@ -26,5 +26,10 @@
 			<td>${data.r_dt}</td>
 		</tr>
 	</table>
+	<script>
+		function chk() {
+			return confirm('정말 삭제 하시겠습니까?');
+		}
+	</script>
 </body>
 </html>
